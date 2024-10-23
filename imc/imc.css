@@ -1,0 +1,527 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.open-sans{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.oswald-body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  
+  .raleway-nosso {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  /* styles.css */
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #CECFD7;
+    color: #333;
+}
+
+header {
+    background-color: #CECFD7;
+    color: #00425c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a  {
+    color: #00425c;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+}
+
+ nav a:hover {
+    color: #43aa8b;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+ nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #43aa8b;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.tit-text p{
+    color: #03223f;
+    font-size: 20px;
+    max-width: 750px;
+}
+.tit-text{
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: #2b8897;
+    font-size: 45px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+    
+}
+
+h2{
+    color: #ffffff;
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+
+}
+h3 {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 2px;
+}
+ 
+p {
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+
+.form-group{
+    margin: auto;
+    width: 400px;
+    justify-content:right;
+ 
+  
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão no lado direito */
+    width: 100%; /* Garante que o botão ocupe o espaço da linha */
+}
+#enviar-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3da9a9;
+    color: white;
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    border: 0px;
+    transition: transform 0.3s ease-in-out;
+
+    
+}
+
+#enviar-btn:hover {
+    transform: scale(1.05);
+}
+
+
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3da9a9;
+    color: white;
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    border: 0px;
+    transition: transform 0.3s ease-in-out;
+
+    
+}
+
+#btn:hover {
+    transform: scale(1.05);
+}
+
+.calculator-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.192);
+    background-color: #003b4f;
+    transform: scale(1.1);
+    margin-top: 90px;
+}
+
+.calculator-image {
+    background-color: #00425c;
+    color: white;
+    padding: 40px 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.calculator-image img {
+    display: block;
+    max-width: 60%;
+}
+
+.calculator-image h2 {
+    font-family: "Open Sans", sans-serif;
+    color: #d9d9d9;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.calculator-image p {
+    font-size: 14px;
+    color: #d9d9d9;
+    font-family: "Poppins", sans-serif;
+}
+
+.calculator-form{
+    background-color: #04384d;
+    color: white;
+    padding: 40px 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse a altura definida */
+    height: 100%; /* Faz com que o container ocupe a altura do pai */
+    margin-top: 0px;
+ 
+}
+.gif{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.resultado {
+    background-color: #04384d;
+    height: 100%; /* Garante que a altura do resultado seja a mesma do container */
+    max-width: 100%;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    display: flex;
+    align-items: flex-start; /* Alinha a barra ao topo e à esquerda */
+    margin-bottom: 20px;
+    
+    max-width: 100%;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    display: flex;
+    align-items: flex-start; /* Alinha a barra ao topo e à esquerda */
+    margin-bottom: 20px;
+}
+.res {
+    margin-top: 78px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+.res p{
+    font-size: 18px;
+}
+
+.resultado-cont {
+    background-color: #2b89979f;
+    padding: 30px 30px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 60px;
+  align-items: flex-start; /* Alinha a barra ao topo e à esquerda */
+  margin-top: 15px;
+    
+}
+.resultado-p1 {
+    margin-bottom: 0px;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+.resultado-valor{
+    font-size: 15px ;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.calculator-form h3,
+.resultado h3 {    
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 20px; /* Removido o margin-left */
+    position: relative; /* Mantém a posição relativa */
+    left: 0; /* Garante alinhamento à esquerda */
+    width: 100%;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.barra-de-prog {
+    max-width: 100%;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    display: flex;
+    align-items: flex-start; /* Alinha a barra ao topo e à esquerda */
+    margin-bottom: 20px;
+}
+
+.barra-de-prog img {
+    width: 80%;
+    align-self: flex-start; /* Garante que a imagem também fique à esquerda */
+    object-fit: contain; /* Garante que a imagem se ajuste corretamente */
+}
+ 
+.underline {
+    width: 100%;
+    height: 3px;
+    background-color: #3da9a9;
+    margin-bottom: 20px;
+    margin-left: 1px;
+}
+
+    .disclaimer{
+        margin-top: 14px;
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+        max-width: 390px;
+        text-align: left;
+        left: 0px;
+        margin-left: 1px;
+        color: #f0f4f8;
+    }
+
+.calculator-form input,
+.calculator-form select {
+    width: 90%; /* Garante que ambos os elementos ocupem 100% da largura do contêiner pai */
+    padding: 15px; /* Mantém o padding consistente */
+    margin-bottom: 12px; /* Mantém a margem inferior consistente */
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Mantém o raio da borda consistente */
+    font-family: "Poppins", sans-serif; /* Mantém a fonte consistente */
+    font-size: 13px; /* Mantém o tamanho da fonte consistente */
+
+}
+.D1{
+    width: 100%;
+    align-items: center;
+    height: 2px;
+    z-index: -1; /* Coloca o título abaixo do contêiner de programas */
+    position: absolute;
+    top: 200px; /* Ajuste este valor para controlar o quanto o ícone ultrapassa o topo do cartão */
+ 
+}
+.D1 img{
+    width: 100%
+}
+.deg1{
+    width: 100%;
+    align-items: center;
+    z-index: -1;
+}
+.deg1 img{
+    width: 100%;
+    height: 350px;
+}
+.deg2{
+    width: 100%;
+    align-items: center;
+}
+.deg2 img{
+    width: 100%
+}
+
+.dicas-imc{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+
+}
+.dicas-imc h2{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #003b4f;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.dicas-imc p{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #003b4f;
+    margin-bottom: 40px;
+    max-width: 900px;
+    font-size: 18px;
+}
+
+.tabela-imc{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.tabela-imc-result{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+
+.tabela-imc-result p{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+.tabela-imc-result p strong{
+    font-weight: 600;
+}
+.tabela-imc-result img{
+    width: 190px;
+}
+footer {
+    background-color: transparent;
+    padding: 20px;
+    color: #00425c;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    gap: 300px;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+footer .footer-links, footer .footer-social {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+footer .footer-links a  {
+    color: #00425c;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+footer .footer-links a:hover {
+    color: #1d8571;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social p {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    color: #003b4f;
+}
+.footer-links p {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    color: #003b4f;
+}
+footer .footer-social a img {
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+footer .footer-logo {
+    margin-top: 20px;
+}
+
+footer .footer-logo img {
+    height: 90px;
+    margin: 0 auto;
+}
+.footer-links p{
+    margin: 0 auto 10px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de TMB</title>
+    <link rel="stylesheet" href="tmb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="img/logo-cima.svg" type="image/x-icon"> 
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">INÍCIO</a></li>
+                <li><a href="../calculadoras/calculadoras.html">CALCULADORAS</a></li>
+                <li><a href="../blog/blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="tit-text">
+        <h1>CALCULADORA DE TMB</h1>
+        <p>Taxa Metabólica Basal é a quantidade mínima de energia que seu corpo precisa para manter as funções vitais
+            em repouso, como respirar, circular sangue, manter a temperatura corporal e as células funcionando.</p>
+        </div>
+        <div class="calculator-container">
+            <div class="calculator-image">
+                <img src="img/tmb.svg" alt="Calculadora">
+                <h2>CALCULADORA DE TMB</h2>
+                <p>Descubra mais sobre o seu corpo</p>
+            </div>
+            <div class="calculator-form" id="form-container">
+                <h3>Preencha e confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/começo.svg" alt="">
+                    </div>
+                <div class="container" id="inputContainer">
+                    <div class="peso">
+                    <input type="number" id="peso" placeholder="PESO (kg)" required>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="altura" placeholder="ALTURA (cm)" required>
+                        <input type="number" id="idade" placeholder="IDADE" required>
+                    </div>
+                    <div class="sexo">
+                        <select id="sexo" required>
+                            <option value="">SEXO</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+
+                    </div>
+                 
+                </div>
+
+                <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+                
+            <div class="button-container">
+                <button button id="enviar-btn" onclick="calcularTMB()">Enviar</button>
+            </div>
+          </div>
+        </div>
+        <div class="gif">
+            <img src="../img/gif.gif" alt="Um GIF animado" width="80" height="80">
+        </div>
+
+    </main>
+    <div class="D1">
+        <img src="../img/D1.svg" alt="imagem">
+    </div>
+<div class="dicas-tmb">
+    <div class="deg1">
+        <img src="img/deg1.png" alt="imagem">
+    </div>
+    <div class="explicacao">
+        <h2>O que é TMB?</h2>
+        <p>Imagine seu corpo como uma casa que precisa de energia para funcionar. A taxa metabólica basal (TMB)
+             é como a conta de luz dessa casa: é a quantidade mínima de energia que seu corpo gasta para manter
+              as funções vitais em repouso, como respirar, circular sangue e manter o cérebro funcionando.
+               Em outras palavras, é a energia que você gasta apenas para existir!</p>
+               
+    </div>
+    <div class="dicas-tmb-container">
+        <div class="dicas-tmb-info">
+            <h2>Por que o TMB é importante?</h2>
+            <p> <strong>Equilíbrio Energético:</strong><br>
+                A TMB é o ponto de partida para entender nossas necessidades energéticas.
+                Ao conhecer nossa TMB, podemos ajustar nossa ingestão calórica para manter 
+                um equilíbrio energético saudável, evitando tanto o excesso quanto a deficiência de calorias.</p>
+
+             <p> <strong>Melhora do desempenho físico:</strong><br>
+                Atletas e pessoas que praticam exercícios físicos regularmente
+                 podem utilizar a TMB para otimizar sua alimentação e alcançar melhores resultados.</p>
+
+             <p> <strong>Bem-estar geral:</strong><br>
+                Uma TMB equilibrada contribui para uma sensação de bem-estar geral,
+                 com mais energia e disposição para as atividades do dia a dia.</p>
+        </div>
+        <div class="dicas-tmb-img">
+            <img src="img/tmb-corrida.svg">
+        </div>
+    </div>
+    <div class="deg2">
+        <img src="img/deg2.svg" alt="imagem">
+    </div>
+</div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <p>Veja também</p>
+                <a href="#">blog</a>
+                <a href="#">calculadora fit</a>
+            </div>
+            <div class="footer-social">
+                <p>Nos siga em nossas redes sociais:</p>
+                <div class="redes-sociais">
+                    <a href="#"><img src="img/6.svg" alt="Facebook"></a>
+                    <a href="#"><img src="img/7.svg" alt="Twitter"></a>
+                    <a href="#"><img src="img/5.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc Logo">
+        </div>
+    </footer>
+ 
+    <script src="tmb.js"></script>
+</body>
+</html>

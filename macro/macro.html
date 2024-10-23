@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Macros</title>
+    <link rel="stylesheet" href="macro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/img/logo-cima.svg" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">INÍCIO</a></li>
+                <li><a href="../calculadoras/calculadoras.html">CALCULADORAS</a></li>
+                <li><a href="../blog/blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tit-text">
+            <h1>CALCULADORA DE MACROS</h1>
+            <p>Macronutrientes são os nutrientes que nosso corpo precisa em grandes quantidades para funcionar corretamente. 
+                Eles são a principal fonte de energia e os "tijolos" que constroem e reparam nossos tecidos.</p>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-image">
+                <img src="img/macro.svg" alt="Calculadora">
+                <h2>CALCULADORA DE MACRONUTRIENTES</h2>
+                <p>Descubra mais sobre o seu corpo</p>
+            </div>
+
+            <div class="calculator-form" id="form-container">
+                <h3>Preencha e confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/começo.svg" alt="">
+                    </div>
+
+                <div class="peso">
+                    <input type="number" id="peso" placeholder="PESO (kg)">
+                </div>
+
+                <div class="inline-group">
+                    <div class="form-group">
+                        <input type="number" id="idade" placeholder="IDADE">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="altura" placeholder="ALTURA (cm)">
+                    </div>
+                </div>
+
+                <div class="inline-group">
+                    <div class="form-group">
+                        <select id="sexo">
+                            <option value="" disabled selected>SEXO</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="objetivo">
+                            <option value="" disabled selected>OBJETIVO</option>
+                            <option value="ganho_massa">Ganho de Massa</option>
+                            <option value="emagrecimento">Emagrecimento</option>
+                            <option value="manutencao">Manutenção</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="atividade-fisica">
+                    <p>Nível de Atividade Física:</p>
+                    <label>
+                        <input type="radio" name="atividade" value="sedentario" onclick="toggleAtividadeFisica(false)">
+                        Me considero uma pessoa sedentária
+                    </label>
+                    <label>
+                        <input type="radio" name="atividade" value="ativo" onclick="toggleAtividadeFisica(true)">
+                        Me considero uma pessoa ativa
+                    </label>
+
+                    <div id="atividade-opcoes" style="display: none;">
+                        <div class="progress-bar-background">
+                            <div id="progress-level" class="progress-level"></div>
+                            <div id="slider" class="progress-slider"></div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span id="pouco-ativo" class="progress-item" onclick="selecionarAtividade(1)">Pouco ativo</span>
+                            <span id="ativo" class="progress-item" onclick="selecionarAtividade(2)">Ativo</span>
+                            <span id="muito-ativo" class="progress-item" onclick="selecionarAtividade(3)">Muito ativo</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+              
+                <div class="button-container"> 
+                    <button id="enviar-btn" onclick="calcularMacro()">Enviar</button>
+                </div>
+            </div>
+
+
+            <div class="resultado" id="resultado-container" style="display: none;">
+                <h3>Confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/final.svg" alt="">
+                    </div>
+                <div class="res">
+                    <p>Seu consumo deve ser:</p>
+                </div>
+                <div class="resultado-cont">
+                    <div class="cal">
+                        <h2><span id="calorias-resultado"></span></h2>
+                        <p>de calorias por dia.</p>
+                    </div>
+                        <div class="prot-carb-gord">
+                            <div class="prot">
+                        <p class="tit">PROTEÍNAS</p>
+                        <h2 class="result"><span id="proteina-resultado"></span></h2>
+                        <p class="tit2">gramas por dia.</p>
+                            </div>
+
+                            <div class="carb">
+                        <p class="tit">CARBOIDRATOS</p>
+                        <h2 class="result"><span id="carboidratos-resultado"></span></h2>
+                        <p class="tit2">gramas por dia.</p>
+                            </div>
+
+                            <div class="gord">
+                        <p class="tit">GORDURAS</p>
+                        <h2 class="result"><span id="gorduras-resultado"></span></h2>
+                        <p class="tit2">gramas por dia.</p>
+                            </div>
+                </div>
+            </div>
+            <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+            </div>
+        </div>
+        <div class="gif">
+            <img src="../img/gif.gif" alt="Um GIF animado" width="80" height="80">
+        </div>
+
+    </main>
+
+    <div class="D1">
+        <img src="../img/D1.svg" alt="imagem">
+    </div>
+
+    <div class="dicas-macro">
+        <div class="deg1">
+            <img src="img/deg1.png" alt="imagem">
+        </div>
+
+        <div class="tit-macro">
+              <h2>Por que calcular macronutrientes?</h2>  
+        </div>
+
+        <div class="container-text">
+            <div class="container-text-p">
+            <p><strong>Alcançar objetivos específicos:</strong><br>
+                Se você quer perder peso, ganhar massa
+                 muscular ou manter o peso, ajustar a proporção de macronutrientes pode otimizar os resultados.</p>
+            </div>
+            <div class="container-text-p">
+                <p><strong>Melhorar o desempenho físico:</strong><br>
+                    Para atletas ou praticantes de atividades físicas, o ajuste correto de macronutrientes 
+                    garante energia adequada e recuperação muscular.</p>
+                </div>    
+            <div class="container-text-p">
+                <p><strong>Manter uma dieta equilibrada:</strong><br>
+                    Controlar a ingestão de macronutrientes garante uma nutrição balanceada, 
+                    prevenindo excessos ou deficiências de nutrientes.</p>
+                </div>
+             </div>
+
+                <div class="imagem-macro">
+                    <img src="img/imagem.svg">
+                </div>
+         </div>
+         <div class="container-text">
+            <div class="container-text-p">
+            <p><strong>Proteínas:</strong><br>
+                As proteínas são os principais componentes estruturais do corpo, formando músculos, órgãos, pele, 
+                cabelo e outras estruturas. Além disso, elas são fundamentais para a produção de enzimas 
+                (substâncias que aceleram reações químicas no organismo) 
+                e hormônios (mensageiros químicos que regulam diversas funções).</p>
+            </div>
+            <div class="container-text-p">
+                <p><strong>Carboidratos:</strong><br>
+                    Os carboidratos são a principal fonte de energia para o organismo, fornecendo o combustível necessário 
+                    para as atividades diárias. Eles são convertidos em glicose, que é 
+                    utilizada pelas células para produzir energia.</p>
+                </div>    
+            <div class="container-text-p">
+                <p><strong>Gorduras:</strong><br>
+                    As gorduras são uma fonte concentrada de energia e desempenham diversas outras funções importantes no organismo.
+                     Elas ajudam a proteger os órgãos internos, a manter a temperatura corporal e a produzir hormônios.</p>
+                </div>
+             </div>
+
+         <div class="deg2">
+            <img src="img/deg2.svg" alt="imagem">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <p>Veja também</p>
+                <a href="#">blog</a>
+                <a href="#">calculadora fit</a>
+            </div>
+            <div class="footer-social">
+                <p>Nos siga em nossas redes sociais:</p>
+                <div class="redes-sociais">
+                    <a href="#"><img src="../img/6.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../img/7.svg" alt="Twitter"></a>
+                    <a href="#"><img src="../img/5.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc Logo">
+        </div>
+    </footer>
+
+    <script src="macro.js"></script>
+</body>
+</html>

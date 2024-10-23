@@ -1,0 +1,367 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.open-sans{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.oswald-body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  
+  .raleway-nosso {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  /* styles.css */
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #CECFD7;
+      color: white;
+      text-align: center;
+      
+  }
+  
+  header {
+    background-color: #00425c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+}
+header nav a:hover {
+    color: #7FD1B9;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7FD1B9;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.logo img {
+    height: 100px;/* Adjust the height according to your logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a.register {
+    color: #038BBB;
+}
+
+  .slider {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #CECFD7;
+    
+  }
+  
+  .slider-content {
+      text-align: center;
+  }
+  
+  .slider-content img {
+      width: 100%;
+      height: auto;
+ 
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) {
+      nav ul {
+          display: flex;
+      }
+      
+  }
+
+  
+.hero {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 400px;
+    background-color: #038abb00;
+}
+
+.hero-content {
+    max-width: 100%;
+    margin-left: 12%;
+   
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Anton", sans-serif;
+    color: #00425c;
+    text-align:left;
+    font-size: 2.8rem;
+    
+}
+
+.hero-content p {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+    color:#00425c;
+    max-width: 60%;
+    text-align:left;
+    font-size: 1.5rem;
+     font-family: "Poppins", sans-serif;
+}
+
+.hero-image{
+    max-width:40%;
+    margin-right: 10%;
+}
+.hero-image img {
+    width: 70%;
+    height: auto;
+    
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+    gap: 50px; /* Controla o espaço entre os .feature-card */
+}
+
+.feature-card {
+    background-color: #00425c;
+    color: white;
+    padding: 20px 10px;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative; /* Garante que o ícone seja posicionado em relação ao cartão */
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    position: absolute;
+    top: -50px; /* Ajuste este valor conforme necessário */
+    right: 10px;
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog.icon {
+    background-image: url('img/3.svg');
+}
+
+.calculadora.icon {
+    background-image: url('img/2.svg');
+}
+
+
+.feature-card h2 {
+    margin-bottom: 20px;
+    max-width: 90%;
+    text-align:left;
+    font-size: 2.3rem;
+    font-family: "Anton", sans-serif;
+    margin-left: 10%;
+    letter-spacing: 1px; /* Aumenta o espaço entre as letras em 2 pixels */
+}
+
+.feature-card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 52%;
+    text-align:left;
+    font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 10%;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.feature-card .btn {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+.feature-card .btn:hover {
+    color: #6BB5A3;
+}
+
+
+ /*imagens geometricas*/
+ .forma1{
+    width: 100%;
+    align-items: center;
+    height: 2px;
+    z-index: -1; /* Coloca o título abaixo do contêiner de programas */
+    position: absolute;
+    top: 1000px; /* Ajuste este valor para controlar o quanto o ícone ultrapassa o topo do cartão */
+ 
+}
+.forma1 img{
+    width: 100%
+}
+
+.forma2{
+    width: 100%;
+    align-items: center;
+}
+.forma2 img{
+    width: 100%;
+}
+    /*..................*/
+    footer {
+  
+        background-color: transparent;
+        padding: 20px;
+        color: #00425c;
+        text-align: center;
+    }
+    
+    footer .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        gap: 300px;
+        align-items: flex-start;
+        margin-left: 100px;
+    }
+    
+    footer .footer-links, footer .footer-social {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    
+    }
+    
+    footer .footer-links a  {
+        color: #00425c;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    
+    footer .footer-links a:hover {
+        color: #1d8571;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-social p {
+        margin-bottom: 10px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .footer-links p {
+        margin-bottom: 10px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    footer .footer-social a img {
+        height: 40px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    footer .footer-social a img:hover {
+        transform: scale(1.2);
+    }
+    
+    footer .footer-logo {
+        margin-top: 20px;
+    }
+    
+    footer .footer-logo img {
+        height: 90px;
+        margin: 0 auto;
+    }
+    .footer-links p{
+        margin: 0 auto 10px;
+    }

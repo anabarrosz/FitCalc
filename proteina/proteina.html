@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Proteínas</title>
+    <link rel="stylesheet" href="proteina.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/img/logo-cima.svg" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">INÍCIO</a></li>
+                <li><a href="../calculadoras/calculadoras.html">CALCULADORAS</a></li>
+                <li><a href="../blog/blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tit-text">
+            <h1>CALCULADORA DE PROTEÍNAS</h1>
+            <p>A proteína é um nutriente essencial para o corpo humano. Ela desempenha diversas funções importantes, 
+                como a construção e reparação dos tecidos e o fortalecimento do sistema imunológico.</p>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-image">
+                <img src="prot.svg" alt="Calculadora">
+                <h2>CALCULADORA DE PROTEÍNAS</h2>
+                <p>Descubra mais sobre o seu corpo</p>
+            </div>
+
+            <div class="calculator-form" id="form-container">
+                <h3>Preencha e confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/começo.svg" alt="">
+                    </div>
+
+                <div class="peso">
+                    <input type="number" id="peso" placeholder="PESO (kg)">
+                </div>
+
+                <div class="inline-group">
+                    <div class="form-group">
+                        <input type="number" id="idade" placeholder="IDADE">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="altura" placeholder="ALTURA (cm)">
+                    </div>
+                </div>
+
+                <div class="inline-group">
+                    <div class="form-group">
+                        <select id="sexo">
+                            <option value="" disabled selected>SEXO</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="objetivo">
+                            <option value="" disabled selected>OBJETIVO</option>
+                            <option value="ganho_massa">Ganho de Massa</option>
+                            <option value="emagrecimento">Emagrecimento</option>
+                            <option value="manutencao">Manutenção</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="atividade-fisica">
+                    <p>Nível de Atividade Física:</p>
+                    <label>
+                        <input type="radio" name="atividade" value="sedentario" onclick="toggleAtividadeFisica(false)">
+                        Me considero uma pessoa sedentária
+                    </label>
+                    <label>
+                        <input type="radio" name="atividade" value="ativo" onclick="toggleAtividadeFisica(true)">
+                        Me considero uma pessoa ativa
+                    </label>
+
+                    <div id="atividade-opcoes" style="display: none;">
+                        <div class="progress-bar-background">
+                            <div id="progress-level" class="progress-level"></div>
+                            <div id="slider" class="progress-slider"></div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span id="pouco-ativo" class="progress-item" onclick="selecionarAtividade(1)">Pouco ativo</span>
+                            <span id="ativo" class="progress-item" onclick="selecionarAtividade(2)">Ativo</span>
+                            <span id="muito-ativo" class="progress-item" onclick="selecionarAtividade(3)">Muito ativo</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+              
+                <div class="button-container"> 
+                    <button id="enviar-btn" onclick="calcularProteina()">Enviar</button>
+                </div>
+            </div>
+            
+            <div class="resultado" id="resultado-container" style="display: none;">
+                <h3>Confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/final.svg" alt="">
+                    </div>
+                <div class="res">
+                    <p>Sua quantidade diária ideal de proteína é:</p>
+                </div>
+                <div class="resultado-cont">
+                    <p class="resultado-p1">Você deve consumir cerca de</p>
+                    <h2 class="resultado-valor"> <strong><span id="proteina-resultado"></span></strong> </h2> 
+                    <p class="resultado-p2">proteína por dia.</p>
+                </div>
+                <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+            
+              
+            </div>
+        </div>
+    </main>
+
+        <div class="gif">
+            <img src="../img/gif.gif" alt="Um GIF animado" width="80" height="80">
+        </div>
+
+        <div class="D1">
+            <img src="../img/D1.svg" alt="imagem">
+        </div>
+
+    <div class="dicas-prot">
+        <div class="deg1">
+            <img src="img/deg1.png" alt="imagem">
+        </div>
+        <div class="dicas-prot-text">
+            <h2>Onde encontrar as proteínas</h2>
+            <p>Muitos alimentos possuem proteínas em sua composição,
+                mas alguns possuem uma quantidade maior, sendo considerados
+                fontes de proteína, veja alguns exemplos abaixo:</p>
+            </div>
+            
+            <div class="imagens">
+                <div class="img-proteinas">
+                    <div class="img-prot">
+                        <img src="img/1.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/2.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/3.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/4.svg" alt="imagem">
+                    </div>
+                </div>
+ 
+                <div class="img-proteinas">
+                    <div class="img-prot">
+                        <img src="img/5.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/6.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/7.svg" alt="imagem">
+                    </div>
+                    <div class="img-prot">
+                        <img src="img/8.svg" alt="imagem">
+                    </div>
+                </div>
+            </div>
+
+            <div class="deg2">
+                <img src="img/deg2.svg" alt="imagem">
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <p>Veja também</p>
+                    <a href="#">blog</a>
+                    <a href="#">calculadora fit</a>
+                </div>
+                <div class="footer-social">
+                    <p>Nos siga em nossas redes sociais:</p>
+                    <div class="redes-sociais">
+                        <a href="#"><img src="../img/6.svg" alt="Facebook"></a>
+                        <a href="#"><img src="../img/7.svg" alt="Twitter"></a>
+                        <a href="#"><img src="../img/5.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="../img/logo-escura.svg" alt="FitCalc Logo">
+            </div>
+        </footer>
+        
+    <script src="proteina.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="imc.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">INÍCIO</a></li>
+                <li><a href="../calculadoras/calculadoras.html">CALCULADORAS</a></li>
+                <li><a href="../blog/blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="tit-text">
+        <h1>CALCULADORA DE IMC</h1>
+        <p> Cálculo para estimar a quantidade de gordura corporal que serve como um indicador inicial de saúde, ajudando a 
+            identificar se uma pessoa está abaixo do peso, com peso normal, com sobrepeso ou obesa.</p>
+    </div>
+        <div class="calculator-container">
+            <div class="calculator-image">
+                <img src="img/imc.svg" alt="Calculadora">
+                <h2>CALCULADORA DE IMC</h2>
+                <p>Descubra mais sobre o seu corpo</p>
+            </div>
+            <div class="calculator-form" id="form-container">
+                <h3>Preencha e confira seu resultado</h3>
+                <div class="barra-de-prog">
+                    <img src="../img/começo.svg" alt="">
+                </div>
+
+                <div class="container" id="inputContainer">
+                    <input type="number" id="weight" placeholder="PESO" required>
+                    <input type="number" id="height" placeholder="ALTURA" required>
+                
+                    <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+              
+                    <div class="button-container"> 
+                        <button id="enviar-btn" onclick="calcularIMC()">Calcular</button>
+                </div>
+            </div>
+            
+               
+        <div class="resultado" id="resultado-container" style="display: none;">
+                <div class="resultado-cont">        
+                    <p class="resultado-p1">Seu IMC é: <strong><span id="imc-resultado"></span></strong></p>
+                    <h2 class="resultado-valor"> <span id="resultado"></span> </h2> 
+                </div>
+                    <p class="disclaimer">Atenção: O resultado desta ferramenta não dispensa a consulta com um médico ou profissional especializado.</p>
+    
+            </div>
+        </div>
+
+    </main>
+    <div class="gif">
+        <img src="../img/gif.gif" alt="Um GIF animado" width="80" height="80">
+    </div>
+
+    <div class="D1">
+        <img src="../img/D1.svg" alt="imagem">
+    </div>
+
+    <div class="dicas-imc">
+        <div class="deg1">
+            <img src="img/deg1.png" alt="imagem">
+        </div>
+        <div class="dicas-imc-tit">
+            <h2>O que é IMC</h2>
+            <p>O IMC é uma ferramenta útil para identificar possíveis problemas de peso, mas não leva em consideração fatores como a 
+                composição corporal (massa muscular) e a distribuição de gordura. Portanto, é sempre bom consultar
+                 um profissional de saúde para uma avaliação mais completa.</p>
+        </div>
+
+        <div class="tabela-imc">
+    
+                <div class="tabela-imc-result">
+                    <img src="img/magro.svg">
+                    <p><strong>IMC</strong></p>
+                    <p><strong>Menor que 18,5</strong></p>
+                    <p>Abaixo do peso</p>
+                </div>
+                <div class="tabela-imc-result">
+                    <img src="img/normal.svg">
+                    <p><strong>IMC</strong></p>
+                    <p><strong>Entre 18,5 e 24,9</strong></p>
+                    <p>Peso normal</p>
+                </div>
+                <div class="tabela-imc-result">
+                    <img src="img/sobrepeso.svg">
+                    <p><strong>IMC</strong></p>
+                    <p><strong>Entre 25 e 29,9</strong></p>
+                    <p>Sobrepeso</p>
+                </div>
+                <div class="tabela-imc-result">
+                    <img src="img/obesidade.svg">
+                    <p><strong>IMC</strong></p>
+                    <p><strong>Igual ou acima de 30</strong></p>                        
+                    <p>Obesidade</p>
+                </div>
+            
+        </div>
+
+        <div class="deg2">
+            <img src="img/deg2.svg" alt="imagem">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <p>Veja também</p>
+                <a href="#">blog</a>
+                <a href="#">calculadora fit</a>
+            </div>
+            <div class="footer-social">
+                <p>Nos siga em nossas redes sociais:</p>
+                <div class="redes-sociais">
+                    <a href="#"><img src="../img/6.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../img/7.svg" alt="Twitter"></a>
+                    <a href="#"><img src="../img/5.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="../img/logo-escura.svg" alt="FitCalc Logo">
+        </div>
+    </footer>
+    
+    <script src="imc.js"></script>
+</body>
+</html>

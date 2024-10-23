@@ -1,0 +1,322 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.open-sans{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.oswald-body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  
+.raleway-nosso {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  /* styles.css */
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #CECFD7;
+      color: white;
+      text-align: center;
+      
+  }
+  
+  header {
+    background-color: #CECFD7;
+    color: #00425c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a  {
+    color: #00425c;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+}
+
+ nav a:hover {
+    color: #43aa8b;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+ nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #43aa8b;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #CECFD7;
+    color: white;
+}
+
+.logo img {
+    height: 100px;/* Adjust the height according to your logo */
+}
+
+main {
+    padding: 20px;
+}
+.forma2{
+    width: 100%;
+    align-items: center;
+    top:1000px;
+}
+.forma2 img{
+    width: 100%;
+}
+.titulo{
+    text-align: center;
+    color: #00425c;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.titulo h1{
+    font-size: 2.8rem;   
+    font-family: "Oswald", sans-serif;
+    margin: 10px 0px;
+}
+
+.titulo p{
+    font-size: 1.6rem;   
+    font-family: "Poppins", sans-serif;
+    margin: 0px 0px;
+
+}
+
+.programs {
+    text-align: center;
+}
+
+
+.program-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.program-card {
+    position: relative;
+    background-color: #00425c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 290px;
+    height: 310px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover {
+    transform: scale(1.05);
+}
+
+.program-card .btn:hover {
+    color: #79cbbb;
+}
+
+.program-card .btn {
+    font-family: "Poppins", sans-serif;
+}
+.program-card h2 {
+    margin-top: 5px;
+    margin-bottom: 13px;
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.program-card p {
+    margin-bottom: 20px;
+    margin-top: 2px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* Centraliza o ícone horizontalmente */
+    margin-bottom: 35px;
+    margin-top: 10px;
+    background-size: cover;
+}
+
+/* Para posicionar o botão "Saiba mais" no canto direito */
+.program-card a {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+}
+
+.agua {
+    background-image: url('img/agua.svg');
+}
+
+.proteinas {
+    background-image: url('img/proteina.svg');
+}
+
+.imc {
+    background-image: url('img/imc.svg');
+}
+
+.macro {
+    background-image: url('img/macro.svg');
+}
+
+.calorias {
+    background-image: url('img/calorias.svg');
+}
+
+.tmb {
+    background-image: url('img/tmb.svg');
+}
+
+.forma{
+    width: 100%;
+    height: 2px;
+    z-index: -1; /* Coloca o título abaixo do contêiner de programas */
+    position: absolute;
+    top: 450px; /* Ajuste este valor para controlar o quanto o ícone ultrapassa o topo do cartão */
+ 
+}
+.forma img{
+    width: 100%;
+}
+   /*..................*/
+   footer {
+    background-color: transparent;
+    padding: 20px;
+    color: #00425c;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    gap: 300px;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+footer .footer-links, footer .footer-social {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+footer .footer-links a  {
+    color: #00425c;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+footer .footer-links a:hover {
+    color: #1d8571;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social p {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+}
+.footer-links p {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+}
+footer .footer-social a img {
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+footer .footer-logo {
+    margin-top: 20px;
+}
+
+footer .footer-logo img {
+    height: 90px;
+    margin: 0 auto;
+}
+.footer-links p{
+    margin: 0 auto 10px;
+}
