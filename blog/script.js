@@ -1,13 +1,27 @@
-function showPage(pageNumber) {
-    // Esconder todas as páginas
-    const pages = document.querySelectorAll('.post-container');
-    pages.forEach(page => page.style.display = 'none');
-  
-    // Mostrar a página selecionada
-    const selectedPage = document.getElementById(`page-${pageNumber}`);
-    selectedPage.style.display = 'block';
-  }
+ function showPage(pageNumber) {
+        const pages = document.querySelectorAll('.post-container');
+        pages.forEach(page => page.style.display = 'none');
 
+        const selectedPage = document.getElementById(`page-${pageNumber}`);
+        if (selectedPage) {
+            selectedPage.style.display = 'block';
+        }
+    }
+
+    // Função para obter o parâmetro da URL
+    function getPageFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('page'); // Retorna o valor do parâmetro 'page'
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const pageNumber = getPageFromUrl();
+        if (pageNumber) {
+            showPage(pageNumber); // Exibe a página correspondente
+        } else {
+            showPage(1); // Exibe a primeira página por padrão
+        }
+    });
 
 
 
